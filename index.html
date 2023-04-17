@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css"/>
+</head>
+<body>
+    <div class="bg" aria-hidden="true">
+        <div class="bg_dot"></div>
+        <div class="bg_dot"></div>
+    </div>
+    <form autocomplete="off">
+        <div class="form_icon" aria-hidden="true"></div>
+        <div class="form_input-container">
+            <input 
+            id="user" 
+            aria-label="User" 
+            type="text" 
+            placeholder=" "
+            />
+            <label for="user">User</label>
+        </div>
+        <div class="form_input-container">
+            <input 
+            id="password"
+            aria-label="User"
+            type="password"
+            placeholder=" " 
+            />
+            <label for="password">Password</label>
+        </div>
+
+        <div class="form_spacer" aria-hidden="true"></div>
+        <!-- <button id="but" value="Wyślij"
+        onclick="sprawdzDane();"> -->
+
+        <!-- <a href = "log.html">
+            Login</a></button>
+            <p id="demo"></p> -->
+
+
+        <button id="but" onclick="changeVisibility()">Login</button>
+        <div class="TextBox">ZALOGOWANO</div>
+
+
+     </form>
+     <script>
+        function changeVisibility(){
+            document.querySelector(".TextBox").style.visibility = "visible";
+        }
+
+
+        
+        function sprawdzDane(){
+            var user = document.getElementById("user");
+            var userText = user.value;
+            var password = document.getElementById("password");
+            var passwordText = password.value;
+            err = false;
+
+            if(userText==""){
+            user.style.backgroundColor = "red";
+            err = true; 
+            }
+            else{
+            user.style.backgroundColor = "green";
+            }
+            if(passwordText==""){
+            password.style.backgroundColor = "red";
+            err = true; 
+            }
+            else{
+            password.style.backgroundColor = "green";
+            }
+            }
+
+
+        // let a = document.querySelector(imput.id="password")
+        // if   (a=null )
+        // {
+        //     alert("login:JózekŁobuzek23 hasło:LudzieGłupiejąHurtowoAmądrzejąDetalicznie")
+        // }
+        // document.addEventListener("click", myFunction);
+
+        
+//         // function myFunction() {
+//         // document.getElementById("but").innerHTML = "Login";
+//         // }
+        
+//         const form = document.querySelector("form");
+//         const input = form.querySelector("input");
+
+//         form.addEventListener("submit", e => {
+//         e.preventDefault();
+
+//     //jeżeli wszystko ok to wysyłamy
+//         if (input.value.length >= 3) {
+//         form.submit();
+//     } else {
+//         //jeżeli nie to pokazujemy jakieś błędy
+//         alert("Kolego wypełniłeś błędnie nasz super formularz");
+//     }
+// })
+      
+
+        
+        
+        
+    </script>
+</body>
+</html>
